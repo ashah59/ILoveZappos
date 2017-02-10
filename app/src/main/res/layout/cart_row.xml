@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageViewCartRow"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_remove_shopping_cart_black_24dp"
+        android:id="@+id/imageViewRemoveCart"
+        android:layout_alignTop="@+id/textViewCartRow"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewCartRow"
+        android:textAppearance="@android:style/TextAppearance.Material.Large"
+        android:layout_alignTop="@+id/imageViewCartRow"
+        android:layout_toRightOf="@+id/imageViewCartRow"
+        android:layout_toLeftOf="@id/imageViewRemoveCart"/>
+
+</RelativeLayout>

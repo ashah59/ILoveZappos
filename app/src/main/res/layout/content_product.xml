@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="product"
+            type="com.example.shah.ilovezappos.Product" />
+    </data>
+
+    <android.support.v4.widget.NestedScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.shah.ilovezappos.ProductActivity"
+        tools:showIn="@layout/activity_product">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{product.brandName}"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:id="@+id/textViewProdName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{product.productName}"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/textViewDiscPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{product.price}"
+                android:textColor="@color/colorAccent"
+                android:textAppearance="@android:style/TextAppearance.Material.Large"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textAlignment="viewEnd" />
+
+            <TextView
+                android:id="@+id/textViewOriginalPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{product.originalPrice}"
+                android:textAppearance="@android:style/TextAppearance.Material.Small"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
+                android:textAlignment="viewEnd" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewDisc"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="5dp"
+                android:text="@{product.percentOff + ` OFF!`}"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                android:textAlignment="viewEnd" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</layout>
